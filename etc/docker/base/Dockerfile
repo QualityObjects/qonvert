@@ -15,8 +15,6 @@ COPY ./gunicorn_conf.py /server_conf/gunicorn_conf.py
 
 WORKDIR /app/
 
-VOLUME [ "/app", "/server_conf" ]
-
 ENV PYTHONPATH /app
 ENV WORKERS_PER_CORE 2
 ENV WEB_CONCURRENCY 1
