@@ -1,0 +1,5 @@
+/lib/*
+dist/*
+build/*
+.mypy_cache
+__pycache__

@@ -1,0 +1,11 @@
+# encoding: utf-8
+
+from qonvert.main import app
+import sys
+
+if __name__ == "__main__":
+    bind = sys.argv[1] if len(sys.argv) > 1 else 'localhost'
+    port = int(sys.argv[2]) if len(sys.argv) > 2 else 5000
+    import uvicorn
+    print('Launching QOnvert server http://{}:{}...'.format(bind, port))
+    uvicorn.run(app, http='h11', host=bind, port=port, loop='asyncio')

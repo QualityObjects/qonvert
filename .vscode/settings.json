@@ -1,0 +1,8 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": false,
+    "python.pythonPath": "/usr/bin/python3",
+    "python.sortImports.path": "lib",
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
+}
