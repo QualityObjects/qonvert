@@ -29,6 +29,7 @@ async def metadata(img_file):
 
 def reduce(img_file, max_dim = 1200, output_format = 'JPEG') -> BinaryIO:
     img : Image = reduce_img(img_file, max_dim=max_dim, output_format=output_format)
+    exif_data : Image.Exif = img.getexif()
 
     buff = io.BytesIO()
     img.save(buff, format=output_format, exif=exif_data)
